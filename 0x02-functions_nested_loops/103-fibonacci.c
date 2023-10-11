@@ -3,30 +3,32 @@
 /**
  * main - Entry point
  *
- * Description: prints the first 50 Fibonacci numbers
- *		starting with 1 and 2 folled by a new line
+ * Description: prints the sum of even-valued
+ *		fibonacci sequence not exceed
+ *		4million
  *
  * Return: Always 0 (Success)
 */
 
 int main(void)
 {
-	int count;
 	unsigned long fib1 = 0, fib2 = 1, sum;
+	float total_sum;
 
-	for (count = 0; count < 50; count++)
+	while (1)
 	{
 		sum = fib1 + fib2;
-		printf("%lu", sum);
+
+		if (sum > 4000000)
+			break;
+
+		if ((sum % 2) == 0)
+			total_sum += sum;
 
 		fib1 = fib2;
 		fib2 = sum;
-
-		if (count == 49)
-			printf("\n");
-		else
-			printf(", ");
 	}
+	printf("%,0f\n", total_sum);
 
 	return (0);
 }
