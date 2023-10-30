@@ -10,8 +10,9 @@ int count_word(char *s)
 {
 	int flag = 0;
 	int w = 0;
+	int c;
 
-	for (int c = 0; s[c] != '\0'; c++)
+	for (c = 0; s[c] != '\0'; c++)
 	{
 		if (s[c] == ' ')
 			flag = 0;
