@@ -7,16 +7,17 @@
 
 /**
  * struct list_s - signly linked list
- * @stre: string
+ * @str: string - (maloc'ed string)
  * @len: length of the string
  * @next points to the next node
+ *
  * Description: singly linked list node structere
-**/
+ **/
 
 typedef struct list_s
 {
 	char *str;
-	unsigned int len ;
+	unsigned int len;
 	struct list_s *next;
 } list_t;
 
